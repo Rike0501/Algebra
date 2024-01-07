@@ -1,0 +1,12 @@
+1. Iz rječnika 'reziseri':
+  - napravite popis režisera jedan ispod drugog
+  - napišite koji režiser ima najviše, a koji najmanje režiranih filmova
+
+2. Iz rječnika 'ucenici':
+  - izračunajte prosječnu visinu svih učenika
+  - napravite popis u kojem se vidi samo redni broj i ime, npr. 
+            1. Marko Marković
+            2. Iva Ivić
+            ...
+  - ispišite broj učenika i učenica (M i Ž) punom rečenicom npr.
+        U razredu ima 6 učenika i 4 učenice.

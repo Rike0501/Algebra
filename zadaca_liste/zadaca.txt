@@ -1,0 +1,20 @@
+ZADACI - LISTE
+
+1. Kreirajte listu od 10 gradova u Hrvatskoj. Neka korisnik unosi imena gradova.
+
+2. Kreirajte listu koja čuva podatke o imenima i prezimenima 5 glumica i glumaca, ali tako da imena i prezimena unese korisnik. Nakon unosa liste, ispišite listu tako da svaki element liste bude ispisan u novom redu.
+
+3. Kreirajte listu cijena nekih proizvoda koju unosi korisnik. Proizvoljno odredite broj članova liste. Izračunajte zatim ukupnu cijenu i prosječnu cijenu svih proizvoda.
+
+4. Kreirajte listu s ocjenama učenika, s tim da najprije se traži unos koliko ima učenika. Zatim Izračunajte i ispišite prosječnu ocjenu razreda, te koliko ima jedinica, a koliko petica.
+
+5. Zadatak s proizvodima i cijenama proširite na način da ispišete račun oblika: 
+
+olovka:     0.8 eura 
+gumica:     0.3 eura
+...  
+----------------------
+ukupno:     4.75 eura
+
+Ispišite još i najveću i najmanju cijenu, te prosječnu cijenu svih proizvoda.
+Dodajte na ukupni račun podatak o PDV-u, odnosno kolika je cijena bez PDV-a.
