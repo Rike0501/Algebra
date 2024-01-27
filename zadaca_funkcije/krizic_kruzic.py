@@ -38,6 +38,8 @@ def kruzic(unos):
 
 
 
+
+
 print()
 print('  | 0 | 1 | 2 |')
 print('---------------')
