@@ -1,5 +1,5 @@
 
-
+import random
 
 
 red_a = [' ', ' ', ' ']
@@ -78,9 +78,19 @@ ispis_tablice()
 
 while True:
     print('Kažite mi tko igra prvi: krizic ili kruzic ?')
+    print('ili utipkatje riječ nasumicno pa ću ja odrediti. :)')
     prvi_igrac = input('Odgovor: ')
     if prvi_igrac == 'krizic' or prvi_igrac == 'kruzic' :
         break
+    elif prvi_igrac == 'nasumicno':
+        broj = random.randint(0, 1)
+        #print(broj)
+        if broj == 1:
+            prvi_igrac = 'krizic'
+            break
+        elif broj == 0:
+            prvi_igrac = 'kruzic'
+            break
     print('Unijeli ste krivu riječ molim ponovono unesite.')
 
 
