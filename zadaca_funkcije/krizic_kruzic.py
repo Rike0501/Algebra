@@ -105,6 +105,23 @@ if flag == 'krizic':
             break
         
 
+if flag == 'kruzic': 
+    while True:
+        print()
+        krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
+        ispis_tablice()
+        if provjera_tablice() == 'pobjeda':
+            #ispis_tablice()
+            print('Krizic je pobijedio. Čestitam !')
+            break
+        print()
+        kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
+        ispis_tablice()
+        if provjera_tablice() == 'pobjeda':
+            #ispis_tablice()
+            print('Kruzic je pobijedio. Čestitam !')
+            break
+
 
 
 
