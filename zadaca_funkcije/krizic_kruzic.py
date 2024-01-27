@@ -46,6 +46,11 @@ def ispis_tablice():
     print(f'c | {red_c[0]} | {red_c[1]} | {red_c[2]} |')
     print()
 
+def provjera_tablice():
+    if red_a[0] == red_a[1] == red_a[2]:
+        return 'break'
+
+
 print()
 
 print('DOBRODOŠLI U IGRU KRIŽIĆ KRUŽIĆ !')
@@ -59,10 +64,21 @@ prvi_igrac = input('Odgovor: ')
 
 if prvi_igrac == 'krizic':
     krizic(input('Super ! Krizicu molim te unesi svoje prvo polje: '))
+    flag = 'krizic'
 elif prvi_igrac == 'kruzic':
     kruzic(input('Super ! Kruzicu molim te unesi svoje prvo polje: '))
+    flag = 'kruzic'    
 
 ispis_tablice()
+
+
+if flag == 'krizic': 
+    while True:
+        kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
+        ispis_tablice()
+
+
+
 
 
 
