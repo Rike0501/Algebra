@@ -47,8 +47,22 @@ def ispis_tablice():
     print()
 
 def provjera_tablice():
-    if red_a[0] == red_a[1] == red_a[2]:
-        return 'break'
+    if   red_a[0] == red_a[1] != ' ' and red_a[1] == red_a[2]:
+        return 'pobjeda'
+    elif red_b[0] == red_b[1] != ' ' and red_b[1] == red_b[2]:
+        return 'pobjeda'
+    elif red_c[0] == red_c[1] != ' ' and red_c[1] == red_c[2]:
+        return 'pobjeda'
+    elif red_a[0] == red_b[0] != ' ' and red_b[0]  == red_c[0]:
+        return 'pobjeda'
+    elif red_a[1] == red_b[1] != ' ' and red_b[1] == red_c[1]:
+        return 'pobjeda'
+    elif red_a[2] == red_b[2] != ' ' and red_b[2] == red_c[2]:
+        return 'pobjeda'
+    elif red_a[0] == red_b[1] != ' ' and red_b[1]  == red_c[2]:
+        return 'pobjeda'
+    elif red_a[2] == red_b[1] != ' ' and red_b[1] == red_c[0]:
+        return 'pobjeda'
 
 
 print()
@@ -71,11 +85,25 @@ elif prvi_igrac == 'kruzic':
 
 ispis_tablice()
 
+krug = 1
 
 if flag == 'krizic': 
     while True:
+        print()
         kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
         ispis_tablice()
+        if provjera_tablice() == 'pobjeda':
+            ispis_tablice()
+            print('Kruzic je pobijedio. Čestitam !')
+            break
+        print()
+        krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
+        ispis_tablice()
+        if provjera_tablice() == 'pobjeda':
+            ispis_tablice()
+            print('Krizic je pobijedio. Čestitam !')
+            break
+        
 
 
 
