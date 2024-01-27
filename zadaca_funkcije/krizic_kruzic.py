@@ -9,15 +9,15 @@ def krizic(unos):
     if lista[0] == 'a':
         red_a.pop(int(lista[1]))
         red_a.insert(int(lista[1]), 'X')
-        return red_a[int(lista[1])]
+        #return red_a[int(lista[1])]
     elif lista[0] == 'b':
         red_b.pop(int(lista[1]))
         red_b.insert(int(lista[1]), 'X')
-        return red_b[int(lista[1])]
+        #return red_b[int(lista[1])]
     elif lista[0] == 'c':
         red_c.pop(int(lista[1]))
         red_c.insert(int(lista[1]), 'X')
-        return red_c[int(lista[1])]
+        #return red_c[int(lista[1])]
     
 
 def kruzic(unos): 
@@ -25,15 +25,15 @@ def kruzic(unos):
     if lista[0] == 'a':
         red_a.pop(int(lista[1]))
         red_a.insert(int(lista[1]), 'O')
-        return red_a[int(lista[1])]
+        #return red_a[int(lista[1])]
     elif lista[0] == 'b':
         red_b.pop(int(lista[1]))
         red_b.insert(int(lista[1]), 'O')
-        return red_b[int(lista[1])]
+        #return red_b[int(lista[1])]
     elif lista[0] == 'c':
         red_c.pop(int(lista[1]))
         red_c.insert(int(lista[1]), 'O')
-        return red_c[int(lista[1])]
+        #return red_c[int(lista[1])]
 
 def ispis_tablice():
     print()
@@ -41,7 +41,7 @@ def ispis_tablice():
     print('---------------')
     print(f'a | {red_a[0]} | {red_a[1]} | {red_a[2]} |')
     print('---------------')
-    print(f'b | {red_b[0]} | {red_b[1]} | {red_c[2]} |')
+    print(f'b | {red_b[0]} | {red_b[1]} | {red_b[2]} |')
     print('---------------')
     print(f'c | {red_c[0]} | {red_c[1]} | {red_c[2]} |')
     print()
@@ -93,14 +93,14 @@ if flag == 'krizic':
         kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
-            ispis_tablice()
+            #ispis_tablice()
             print('Kruzic je pobijedio. Čestitam !')
             break
         print()
         krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
-            ispis_tablice()
+            #ispis_tablice()
             print('Krizic je pobijedio. Čestitam !')
             break
         
