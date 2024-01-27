@@ -20,7 +20,6 @@ def krizic(unos):
         return red_c[int(lista[1])]
     
 
-
 def kruzic(unos): 
     lista = list(unos)
     if lista[0] == 'a':
@@ -36,19 +35,24 @@ def kruzic(unos):
         red_c.insert(int(lista[1]), 'O')
         return red_c[int(lista[1])]
 
-
-
-
+def ispis_tablice():
+    print()
+    print('  | 0 | 1 | 2 |')
+    print('---------------')
+    print(f'a | {red_a[0]} | {red_a[1]} | {red_a[2]} |')
+    print('---------------')
+    print(f'b | {red_b[0]} | {red_b[1]} | {red_c[2]} |')
+    print('---------------')
+    print(f'c | {red_c[0]} | {red_c[1]} | {red_c[2]} |')
+    print()
 
 print()
-print('  | 0 | 1 | 2 |')
-print('---------------')
-print('a |   |   |   |')
-print('---------------')
-print('b |   |   |   |')
-print('---------------')
-print('c |   |   |   |')
-print()
+
+print('DOBRODOŠLI U IGRU KRIŽIĆ KRUŽIĆ !')
+
+
+ispis_tablice()
+
 
 print('Kažite mi tko igra prvi: krizic ili kruzic ?')
 prvi_igrac = input('Odgovor: ')
@@ -58,9 +62,7 @@ if prvi_igrac == 'krizic':
 elif prvi_igrac == 'kruzic':
     kruzic(input('Super ! Kruzicu molim te unesi svoje prvo polje: '))
 
-print(red_a)
-print(red_b)
-print(red_c)
+ispis_tablice()
 
 
 
