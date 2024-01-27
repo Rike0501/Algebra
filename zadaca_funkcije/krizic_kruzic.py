@@ -1,4 +1,7 @@
 
+
+
+
 red_a = [' ', ' ', ' ']
 red_b = [' ', ' ', ' ']
 red_c = [' ', ' ', ' ']
@@ -73,8 +76,14 @@ print('DOBRODOŠLI U IGRU KRIŽIĆ KRUŽIĆ !')
 ispis_tablice()
 
 
-print('Kažite mi tko igra prvi: krizic ili kruzic ?')
-prvi_igrac = input('Odgovor: ')
+while True:
+    print('Kažite mi tko igra prvi: krizic ili kruzic ?')
+    prvi_igrac = input('Odgovor: ')
+    if prvi_igrac == 'krizic' or prvi_igrac == 'kruzic' :
+        break
+    print('Unijeli ste krivu riječ molim ponovono unesite.')
+
+
 
 if prvi_igrac == 'krizic':
     krizic(input('Super ! Krizicu molim te unesi svoje prvo polje: '))
@@ -85,7 +94,6 @@ elif prvi_igrac == 'kruzic':
 
 ispis_tablice()
 
-krug = 1
 
 if flag == 'krizic': 
     while True:
@@ -103,9 +111,7 @@ if flag == 'krizic':
             #ispis_tablice()
             print('Krizic je pobijedio. Čestitam !')
             break
-        
-
-if flag == 'kruzic': 
+elif flag == 'kruzic': 
     while True:
         print()
         krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
@@ -121,6 +127,8 @@ if flag == 'kruzic':
             #ispis_tablice()
             print('Kruzic je pobijedio. Čestitam !')
             break
+
+
 
 
 
