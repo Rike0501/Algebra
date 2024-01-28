@@ -108,14 +108,16 @@ ispis_tablice()
 if flag == 'krizic': 
     while True:
         print()
-        kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
+        unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
+        kruzic(unos_kruzic)
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
             #ispis_tablice()
             print('Kruzic je pobijedio. Čestitam !')
             break
         print()
-        krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
+        unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
+        krizic(unos_krizic)
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
             #ispis_tablice()
@@ -124,14 +126,16 @@ if flag == 'krizic':
 elif flag == 'kruzic': 
     while True:
         print()
-        krizic(input('Sada igra krizic. Krizicu molim te unesi svoje polje: '))
+        unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
+        krizic(unos_krizic)
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
             #ispis_tablice()
             print('Krizic je pobijedio. Čestitam !')
             break
         print()
-        kruzic(input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: '))
+        unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
+        kruzic(unos_kruzic)
         ispis_tablice()
         if provjera_tablice() == 'pobjeda':
             #ispis_tablice()
