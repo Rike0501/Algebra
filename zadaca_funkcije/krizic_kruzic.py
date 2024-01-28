@@ -68,6 +68,15 @@ def provjera_tablice():
         return 'pobjeda'
 
 
+def provjera_unosa(unos):
+        lista = list(unos)
+        if (lista[0] == 'a' or lista[0] == 'b' or lista[0] == 'c') and (lista[1] == '0' or lista[1] == '1' or lista[1] == '2'):
+            return 'True'
+        else:
+            return 'False' 
+
+
+
 print()
 
 print('DOBRODOŠLI U IGRU KRIŽIĆ KRUŽIĆ !')
@@ -94,54 +103,76 @@ while True:
     print('Unijeli ste krivu riječ molim ponovono unesite.')
 
 
-
-if prvi_igrac == 'krizic':
-    krizic(input('Super ! Krizicu molim te unesi svoje prvo polje: '))
-    flag = 'krizic'
-elif prvi_igrac == 'kruzic':
-    kruzic(input('Super ! Kruzicu molim te unesi svoje prvo polje: '))
-    flag = 'kruzic'    
+while True:
+    if prvi_igrac == 'krizic':
+        unos_krizic = input('Super ! Krizicu molim te unesi svoje prvo polje: ')
+        if provjera_unosa(unos_krizic) == 'True':
+            krizic(unos_krizic)
+            flag = 'krizic'
+            break
+    elif prvi_igrac == 'kruzic':
+        unos_kruzic = input('Super ! Kruzicu molim te unesi svoje prvo polje: ')
+        if provjera_unosa(unos_kruzic) == 'True':
+            kruzic(unos_kruzic)
+            flag = 'kruzic'
+            break    
+    print('Krivi unos !')
 
 ispis_tablice()
 
 
 if flag == 'krizic': 
     while True:
-        print()
-        unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
-        kruzic(unos_kruzic)
-        ispis_tablice()
+        while True:
+            print()
+            unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
+            if provjera_unosa(unos_kruzic) == 'True': 
+                kruzic(unos_kruzic)
+                ispis_tablice()
+                break
+            print('Krivi unos !')
         if provjera_tablice() == 'pobjeda':
-            #ispis_tablice()
-            print('Kruzic je pobijedio. Čestitam !')
-            break
-        print()
-        unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
-        krizic(unos_krizic)
-        ispis_tablice()
+             #ispis_tablice()
+                print('Kruzic je pobijedio. Čestitam !')
+                break
+        while True:
+            print()
+            unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
+            if provjera_unosa(unos_krizic) == 'True':
+                krizic(unos_krizic)
+                ispis_tablice()
+                break
+            print('Krivi unos !')
         if provjera_tablice() == 'pobjeda':
-            #ispis_tablice()
-            print('Krizic je pobijedio. Čestitam !')
-            break
+                #ispis_tablice()
+                print('Krizic je pobijedio. Čestitam !')
+                break
 elif flag == 'kruzic': 
     while True:
-        print()
-        unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
-        krizic(unos_krizic)
-        ispis_tablice()
+        while True: 
+            print()
+            unos_krizic = input('Sada igra krizic. Krizicu molim te unesi svoje polje: ')
+            if provjera_unosa(unos_krizic) == 'True':
+                krizic(unos_krizic)
+                ispis_tablice()
+                break
+            print('Krivi unos !')
         if provjera_tablice() == 'pobjeda':
-            #ispis_tablice()
-            print('Krizic je pobijedio. Čestitam !')
-            break
-        print()
-        unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
-        kruzic(unos_kruzic)
-        ispis_tablice()
+                #ispis_tablice()
+                print('Krizic je pobijedio. Čestitam !')
+                break
+        while True:
+            print()
+            unos_kruzic = input('Sada igra kruzic. Kruzicu molim te unesi svoje polje: ')
+            if provjera_unosa(unos_kruzic) == 'True': 
+                kruzic(unos_kruzic)
+                ispis_tablice()
+                break
+            print('Krivi unos !')
         if provjera_tablice() == 'pobjeda':
             #ispis_tablice()
             print('Kruzic je pobijedio. Čestitam !')
             break
-
 
 
 
