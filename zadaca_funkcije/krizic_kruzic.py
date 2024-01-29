@@ -69,11 +69,13 @@ def provjera_tablice():
 
 
 def provjera_unosa(unos):
-        lista = list(unos)
-        if (lista[0] == 'a' or lista[0] == 'b' or lista[0] == 'c') and (lista[1] == '0' or lista[1] == '1' or lista[1] == '2'):
-            return 'True'
-        else:
-            return 'False' 
+    lista = list(unos)
+    vrijednost = globals()['red_' + lista[0]]
+    index = int(lista[1])
+    if len(lista) == 2 and (lista[0] in ['a', 'b', 'c']) and (lista[1] in ['0', '1', '2']) and vrijednost[index] == ' ':
+        return 'True'
+    else:
+        return 'False'
 
 
 
